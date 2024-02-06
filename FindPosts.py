@@ -1,16 +1,14 @@
 import os 
 
-listDict = []
 
-def createPostDict(directory, listLenght):
-    depth = 0
-    for dirs in os.walk(directory, topdown=False):
-        if depth == listLenght:
-            depth = 0
-            break
-        for name in dirs[2]:
-            if name.endswith(".md"):
-                temp = {'path': name, 'description': name.replace(".md", "") + ' #tft '}
-                listDict.append(temp)
-    print(listDict)
-    depth += 1
+def createPostDict(directory, listLength):
+    listDict = []
+    for root, dirs, files in os.walk(directory):
+        for name in files:
+            if name.endswith(".mp4"):
+                if len(listDict) < listLength:
+                    temp = {'path': os.path.join(root, name), 'description': name.replace(".mp4", "") + ' #tft '}
+                    listDict.append(temp)
+                else:
+                    return listDict
+    return listDict
