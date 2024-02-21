@@ -7,4 +7,4 @@ So far Reels works.
 
 Missing TikTok Api... Will continue with html parsing/scraping
 
-Haven't started on Youtube yet
+Haven't started on Youtube yet, but should be pretty easy since the api is public
