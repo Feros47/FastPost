@@ -34,7 +34,7 @@ def uploadPosts(directory, listLength):
     listDict = createPostDict(directory, listLength)
     uploadInstaPosts(listDict)
     uploadYoutubePosts(listDict)
-    time.sleep(40)
+    time.sleep(120)
     movePosts(listDict, "posted")
 
 uploadPosts(".", 1)
