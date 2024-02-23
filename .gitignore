@@ -161,3 +161,4 @@ cython_debug/
 
 credentials.json
 InstaUpload.py
+client_secrets.json
