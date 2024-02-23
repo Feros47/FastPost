@@ -1,11 +1,8 @@
-from instagrapi import Client
 from FindPosts import createPostDict
 from YoutubeUpload import main as youtube_upload
+from InstaUpload import instaUpload as cl
 import os
 import time
-
-cl = Client()
-cl.login("Lucidityy4", "Niklasm34")
 
 def uploadInstaPosts(listDisct):
     reelsDict = listDisct
@@ -13,7 +10,7 @@ def uploadInstaPosts(listDisct):
         file_path = post['path']
         caption = post['description'] + ' '.join(['#' + "tag "])  # Adjust tags as needed
         # Call clip_upload with the correct parameters
-        cl.clip_upload(file_path, caption)
+        cl(file_path, caption)
 
 def uploadYoutubePosts(listDict):
     shortsDict = listDict
@@ -37,7 +34,7 @@ def uploadPosts(directory, listLength):
     listDict = createPostDict(directory, listLength)
     uploadInstaPosts(listDict)
     uploadYoutubePosts(listDict)
-    time.sleep(20)
+    time.sleep(40)
     movePosts(listDict, "posted")
 
 uploadPosts(".", 1)
