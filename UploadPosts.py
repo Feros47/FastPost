@@ -1,7 +1,7 @@
 from FindPosts import createPostDict
-from InstaUpload import instaUpload as cl
 from YoutubeUpload import main as youtube_upload
 import os
+from InstaUpload import instaUpload as cl
 import time
 
 def uploadInstaPosts(listDisct):
