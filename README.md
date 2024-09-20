@@ -1,5 +1,5 @@
 # FastPost
- Algorithm to post Reels/Shorts automatically 
+ Script to post Reels/Shorts automatically 
 
  It will upload a userspecified amount of videos to each platform and thereafter move the videos to a different userspecified directory 
 
